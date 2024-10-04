@@ -1,4 +1,4 @@
-1. Functional Requirements
+1. Functional Requirements.
 For Students:
 Account Management:
 Registration: Users can create an account with email, password, and other necessary details (e.g., name, phone number).
