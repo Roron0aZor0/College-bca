@@ -1,0 +1,18 @@
+/*
+Theme Name: My E-commerce Theme
+Theme URI: http://example.com/my-ecommerce-theme
+Author: Your Name
+Author URI: http://example.com
+Description: A custom WordPress theme for e-commerce.
+Version: 1.0
+License: GPL2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-ecommerce-theme
+Tags: e-commerce, responsive, custom
+*/
+
+body {
+   
+	background-color: black;
+ }
+

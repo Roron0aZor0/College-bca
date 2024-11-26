@@ -1,0 +1,254 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+  padding: 20px;
+  background-color: #000;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1265px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonials-title {
+  color: #fff;
+  font: 900 48px Poppins, sans-serif;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.testimonials-title:hover {
+  transform: scale(1.02);
+}
+
+.navigation-controls {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.nav-button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.testimonials-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #fff #000;
+  margin-top: 40px;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.testimonials-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonials-scroll::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 4px;
+}
+
+.testimonials-scroll::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.testimonials-scroll::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 16px;
+  min-width: min-content;
+}
+
+.testimonial-card {
+  border-radius: 8px;
+  background-color: #000;
+  display: flex;
+  width: 400px;
+  min-height: 223px;
+  flex-direction: column;
+  padding: 22px 24px;
+  border: 1px solid #d9d9d9;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #fff;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.star-icon:hover {
+  transform: scale(1.2);
+  animation: pulse 1s infinite;
+}
+
+.review-content {
+  margin-top: 24px;
+  color: #fff;
+  font: 400 16px/22px Inter, sans-serif;
+}
+
+.review-content p {
+  margin: 0;
+}
+
+.reviewer-profile {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.reviewer-info {
+  flex: 1;
+}
+
+.reviewer-name {
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
+}
+
+.review-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 991px) {
+  .testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .testimonials-title {
+    font-size: 36px;
+  }
+
+  .navigation-controls {
+    align-self: flex-end;
+  }
+
+  .testimonial-card {
+    width: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

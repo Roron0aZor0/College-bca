@@ -1,0 +1,110 @@
+.new-arrivals-container {
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: Poppins, sans-serif;
+      background: #000;
+      padding: 0 40px;
+      overflow: hidden;
+  }
+  
+  .new-arrive-section-title {
+      border: none;
+      border-bottom: 1px solid #fff;
+      align-self: start;
+      font: 900 48px/90px Poppins;
+      color: #fff;
+      margin-left: 20px;
+      padding-bottom: -20px;
+  }
+  
+  .new-arrive-products-grid {
+      display: flex;
+      margin: 30px auto 0;
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      gap: 40px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 14px 20px;
+  }
+  
+  .new-arrive-products-grid::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .new-arrive-product-card {
+      display: flex;
+      min-width: 240px;
+      width: 257px; 
+      flex-direction: column;
+      overflow: hidden;
+      padding-bottom: 8px;
+      flex: 0 0 auto;
+      
+      /* border: solid 1px white; */
+  }
+  
+  .new-arrive-product-image {
+      aspect-ratio: 0.69;
+      object-fit: fill;
+      width: 100%;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      margin-bottom: 0px;
+  }
+  
+  .new-arrive-product-image:hover {
+      transform: scale(1.05);
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  
+  .new-arrive-product-title {
+      color: #fff;
+      font: 500 24px/50px Poppins;
+      margin-bottom: -10px;
+      letter-spacing: -0.96px;
+  }
+  
+  .new-arrive-product-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #b2adad;
+      font: 500 24px/2 Poppins;
+      letter-spacing: -0.96px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+  }
+  
+  .new-arrive-product-cta:hover {
+      color: #fff;
+  }
+  
+  .cta-text {
+      flex-grow: 1;
+  }
+  
+  .new-arrive-cta-icon {
+      aspect-ratio: 1.36;
+      object-fit: contain;
+      width: 20px;
+      transition: transform 0.3s ease;
+      padding-right: 50px;
+  }
+  
+  .new-arrive-product-cta:hover .new-arrive-cta-icon {
+      transform: translateX(10px);
+      color: white;
+  }
+  
+  @media (max-width: 991px) {
+      .new-arrive-section-title {
+          font-size: 40px;
+          line-height: 84px;
+      }
+  }
